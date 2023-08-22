@@ -1,0 +1,21 @@
+ static void BubbleSort(int[] arr,int n){
+        if(n==0||n==1){
+            return;
+        }
+        for(int i=0;i<n-1;i++){
+            if(arr[i]>arr[i+1]){
+                int temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+            }
+        }
+        BubbleSort(arr,n-1);
+    }
+	public static void main(String[] args) {
+		int[] arr={2,4,6,42,5,7,8,3,5,6,3};
+		int n=arr.length;
+		BubbleSort(arr,n);
+		for(int i=0;i<n;i++){
+		   System.out.print(arr[i]+" ");
+		}
+	}
